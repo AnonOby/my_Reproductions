@@ -111,3 +111,24 @@ If a bank wants to improve its CET1 ratio (Capital/RWA), it can either increase 
 Trying to understand this work in fisrt reading. You'll get there!
 
 ---
+
+**Key Credit Risk Parameters under Basel II IRB**
+
+- **PD (Probability of Default)**  
+  The long‑run average percentage of borrowers in a given rating grade that are expected to default within a one‑year horizon. It is a *through‑the‑cycle* measure, reflecting average credit quality rather than current economic conditions.
+
+- **EAD (Exposure at Default)**  
+  The estimated total amount outstanding (drawn balance plus any additional drawdowns before default) at the moment the borrower defaults. For fixed loans it is the principal; for revolving facilities it incorporates a *credit conversion factor* to reflect potential usage before default.
+
+- **LGD (Loss Given Default)**  
+  The proportion of the exposure (EAD) that is not recovered after default, i.e., \( \text{LGD} = 1 - \text{recovery rate} \). It depends on collateral, seniority, and the workout process.
+
+These three parameters are multiplied to obtain the **Expected Loss (EL)** for a credit facility:
+
+$$
+\text{EL} = \text{PD} \times \text{EAD} \times \text{LGD}
+$$
+
+In the IRB framework, regulatory capital is designed to cover *unexpected losses* (UL), which is the difference between a high percentile of the loss distribution (e.g., 99.9%) and the expected loss.
+
+---
