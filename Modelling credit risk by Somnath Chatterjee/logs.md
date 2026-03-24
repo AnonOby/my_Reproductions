@@ -174,3 +174,64 @@ More precisely:
 > $UL = \sum \sigma_i \rho_i$ is not “adjusting $σ_i$ by $ρ_i$ to obtain total UL”; instead, it **decomposes total UL into each facility’s risk contribution**, where $ρ_i$ determines how much of the facility’s standalone risk translates into portfolio risk.
 
 ---
+### Why does this work?
+
+**1. What is the problem?**
+
+The first sentence of the original text says:
+
+> Part of the difficulty in assessing banks’ RWA calculations is distinguishing between differences that arise from portfolio risk and asset quality and those that arise from differences in models.
+
+When regulators look at two banks’ risk‑weighted assets (RWA), they often find different results.  
+The question is: **where does this difference come from?**
+
+There are two possibilities:
+
+- **Source A: The portfolios themselves are different**  
+  For example, Bank A’s loan portfolio contains many high‑risk industries, while Bank B’s portfolio consists mainly of low‑risk retail mortgages. Even if both banks use exactly the same model, their RWA will differ.
+
+- **Source B: The models are different**  
+  Both banks face the same loan portfolio, but because their internal models (PD, LGD, correlation assumptions, etc.) differ, the calculated RWA also differ.
+
+In reality, both sources are present and intertwined. Regulators cannot directly tell whether the observed difference comes from different portfolio risks or from different models.
+
+**2. How is this solved?**
+
+The following sentences explain:
+
+> To identify differences between banks’ internal models, regulators have undertaken a number of exercises in which banks applied internal models to estimate key risk parameters for a **hypothetical portfolio assets**. This ensured that differences in calculated risk weights are down to differences in banks’ modelling approaches, rather than differences in the risk of portfolios being assessed.
+
+Regulators design a **hypothetical portfolio** and ask each bank to apply its own internal model to calculate the RWA for that **same** portfolio.
+
+**3. Why does this allow the distinction?**
+
+Because now:
+
+- **The portfolio is fixed and identical across banks**  
+  All banks are calculating RWA for the same set of hypothetical loans (same industries, same sizes, same PD/LGD input assumptions, etc.).
+- **Portfolio risk differences are eliminated** (all banks face the same portfolio).
+- Therefore, if the calculated RWA still differ across banks, **the only remaining source is differences in their models** (methodologies, assumptions, parameter estimation techniques, etc.).
+
+This allows regulators to **compare the models themselves** without interference from differences in actual portfolios.
+
+**4. An analogy**
+
+Suppose you want to compare the cooking skills of two chefs:
+
+- If you let each chef cook a dish of their own choice – one makes braised pork, the other steamed fish – and the tastes differ, you cannot be sure whether the difference comes from the different dishes or from the chefs’ skills.
+- If you give them **exactly the same ingredients and the same recipe** for the same dish, and the results still taste different, then the difference must be due to the chefs’ skills.
+
+In this analogy:
+- Banks = chefs  
+- Hypothetical portfolio = same ingredients and recipe  
+- RWA = the final taste of the dish
+
+**5. Summary**
+
+**The exercise works because:**
+
+- Using the same hypothetical portfolio **eliminates “differences in portfolio risk” as a variable**.
+- Any remaining differences in calculated RWA can only be attributed to **differences in banks’ internal modelling approaches**.
+- This is a common **benchmarking** technique used by regulators to assess the comparability of internal models, rather than comparing the absolute RWA of banks’ real portfolios.
+
+---
