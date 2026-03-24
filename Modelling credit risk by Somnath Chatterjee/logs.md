@@ -132,3 +132,45 @@ $$
 In the IRB framework, regulatory capital is designed to cover *unexpected losses* (UL), which is the difference between a high percentile of the loss distribution (e.g., 99.9%) and the expected loss.
 
 ---
+$$
+UL=\sum^{N}_{i=1}\sigma_i\rho_i
+$$
+
+**Your understanding:**
+
+> $σ_i$ is the risk that this facility has on its own, unrelated to other instruments (stand‑alone),  
+> $ρ_i$ adjusts the stand‑alone risk in the context of overall risk through the idea that “higher correlation leads to stronger risk transmission at default”, thereby obtaining the true UL.
+
+**A more precise explanation:**
+
+1. **$σ_i$ (stand‑alone standard deviation)**  
+   It does measure the volatility of credit losses for the $i^{th}$ facility on its own, **but** this volatility itself does not assume independence from other assets. In fact, σ_i already incorporates the facility’s own PD, EAD, LGD, and its own return uncertainty.  
+   However, it **does not reflect** the co‑movement between this facility’s losses and the losses of other facilities in the portfolio.
+
+2. **$ρ_i$ (correlation with the overall portfolio)**  
+   It is not the pairwise correlation between this facility and another single facility; rather, it is the correlation between this facility’s credit losses and **the total portfolio loss**.  
+   Therefore, ρ_i directly measures:  
+   - When the overall portfolio performs poorly, how likely is this facility to also suffer a loss?  
+   - If ρ_i is high, this facility’s losses are highly correlated with the overall portfolio and are not easily diversified away.
+
+3. **What $UL = \sum \sigma_i \rho_i$ means**  
+   This formula is used in the **risk contribution** framework to decompose the portfolio’s unexpected loss (UL) into contributions from each facility.  
+   - $σ_i$ is the facility’s own risk “magnitude”  
+   - $ρ_i$ is the facility’s risk “direction / correlation”  
+   - Their product is the facility’s **marginal contribution** to the total UL  
+
+   Thus, **ρ_i does not simply “adjust” σ_i**; rather, it converts σ_i from “stand‑alone risk” into “contribution to portfolio risk”.
+
+**A simple analogy:**
+
+- $σ_i$ is like the volatility of an individual stock  
+- $ρ_i$ is like the correlation of that stock with the overall market (portfolio)  
+- $σ_i × ρ_i$ is the stock’s **contribution to total market risk** (portfolio volatility), not its own standalone volatility
+
+**Summary:**
+
+Your intuition — “higher correlation leads to stronger risk transmission and thus a larger role in overall risk” — is correct.  
+More precisely:  
+> $UL = \sum \sigma_i \rho_i$ is not “adjusting $σ_i$ by $ρ_i$ to obtain total UL”; instead, it **decomposes total UL into each facility’s risk contribution**, where $ρ_i$ determines how much of the facility’s standalone risk translates into portfolio risk.
+
+---
