@@ -235,3 +235,6 @@ In this analogy:
 - This is a common **benchmarking** technique used by regulators to assess the comparability of internal models, rather than comparing the absolute RWA of banks’ real portfolios.
 
 ---
+### I just hit the Vasicek part and it occurs to me that I NEED MUCH MORE KNOWLEDGE ON MATH TO FULLY UNDERSTAND WHAT I AM LOOKING AT! Back to calc course, à bientôt !
+
+---
